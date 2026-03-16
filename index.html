@@ -135,7 +135,8 @@
             }
 
             /* if everything is ok, welcome the user */
-            alert('Welcome, ' + user + '! Loading your lobby...');
+           localStorage.setItem('cpcc-user', user);
+window.location.href = 'Lobby.html';
         }
     </script>
 
