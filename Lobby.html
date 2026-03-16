@@ -415,10 +415,10 @@
         }
 
         /* What happens when you click ENTER LOBBY */
-        function joinLobby(code) {
-            alert('⚡ Entering lobby: ' + code + '\n+XP incoming!');
-        }
-
+       function joinLobby(code) {
+    localStorage.setItem('current-course', code);
+    window.location.href = 'room.html';
+}
         /* Load the courses when the page opens */
         renderCourses(courses);
     </script>
