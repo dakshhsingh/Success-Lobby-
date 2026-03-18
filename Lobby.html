@@ -317,7 +317,7 @@
 
     <!-- Player stats card - level, XP bar, badges -->
     <div class="player-card">
-        <div class="avatar" id="avatar-initial">S</div>
+      <img id="avatar-initial" style="width:64px; height:64px; border-radius:50%; box-shadow: 0 0 16px rgba(0,255,255,0.5);" />
 
         <div class="player-info">
            <div class="player-name" id="player-name">
@@ -362,7 +362,7 @@
         document.getElementById('player-name').textContent = displayName;
 
         /* Show first letter of username in the avatar circle */
-        document.getElementById('avatar-initial').textContent = userName.charAt(0).toUpperCase();
+       document.getElementById('avatar-initial').src = `https://api.dicebear.com/7.x/pixel-art/svg?seed=${userName}`;
 
         /* List of CPCC courses available */
         const courses = [
